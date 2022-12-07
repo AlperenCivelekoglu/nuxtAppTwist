@@ -1,14 +1,25 @@
 <template>
   <client-only placeholder="loading...">
-  <head>
+  
+    <head>
     <title>Twist | Stil Giyim, Ayakkabı ve Aksesuar Markası</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
-    <body>
-  <main class="site-main">
+    
+<body>
+<main class="site-main">
+     <button id="modalbtn" @click="showModal = true" class="button" outlined></button>
+    <a v-if="isLoggedin" id="profile">my profile</a>
+    <transition name="fade" appear>
+      <div
+        class="modal-overlay"
+        v-if="showModal"
+        @click="showModal = false"
+      ></div>
+    </transition>
     <div class="page page-login">
       <div class="page-login-grid display-grid">
         <div class="ga1 sortable">
@@ -18,124 +29,17 @@
                 <div class="ems-header-title"><span>Hoş geldiniz</span></div>
 
                 <div class="ems-tab-header display-flex">
-                  <div rel="tab-1" class="selected">
-                    <span><a href="uyelik">Üye Girişi</a></span>
-                  </div> 
-                  <div rel="tab-2" class="">
-                    <span><a href="/kayit">Üye Girişi</a></span>
+                  <div rel="tab-2" class="selected">
+                    <span><a href="javascript:void(0);">Yeni Üyelik</a></span>
                   </div>
                 </div>
 
                 <div class="ems-tab-content">
                   <div
-                    rel="tab-1"
-                    class="ems-signin selected"
-                    id="validateUyeGiris"
+                    rel="tab-2"
+                    class="ems-signup selected"
+                    id="validateYeniUyelik"
                   >
-                    <div class="form">
-                      <div class="form-inner login-form-container">
-                        <form
-                        @submit.prevent="Login"
-                          class="ems-form"
-                          id="login"
-                          method="post"
-                          action="/tr/LogOn"
-                        >
-                          <div class="row g-20">
-                            <div class="ems-field label-anim is-completed">
-                              <label class="form-label" for="UserNameOrEmail"
-                                >E-Mail</label
-                              >
-                              <input
-                              v-model="email"
-                                class="
-                                  form-control
-                                  ems-styler-activeted
-                                  act-iStyler
-                                "
-                                id="UserNameOrEmail"
-                                type="text"
-                                name="UserNameOrEmail"
-                               
-                              />
-                              <div class="ems-field-feedback"></div>
-                            </div>
-                            <div class="ems-field label-anim is-completed">
-                              <label class="form-label" for="Password"
-                                >Şifre</label
-                              >
-                              <input
-                              v-model="password"
-                                class="
-                                  form-control
-                                  ems-styler-activeted
-                                  act-iStyler
-                                "
-                                id="Password"
-                                type="password"
-                                name="Password"
-                              />
-                              <div class="ems-field-feedback"></div>
-                            </div>
-                            <div class="ems-field is-active is-completed">
-                              <div
-                                class="
-                                  display-flex
-                                  align-items-center
-                                  justify-between
-                                "
-                              >
-                                
-                            
-                              </div>
-                            </div>
-
-                            <div class="ems-field">
-                              <div
-                                class="
-                                  display-flex
-                                  align-items-center
-                                  justify-between
-                                "
-                              >
-                                <button
-                                  type="submit"
-                                  class="btn btn-clr1 btnDefault"
-                                  id="jest" 
-                                  @click="onClose" 
-                                >
-                                  <span>GİRİŞ YAP</span>
-                                </button>
-                              </div>
-                            </div>
-                            <input
-                              name="__RequestVerificationToken"
-                              type="hidden"
-                              value=""
-                              class="ems-styler-activeted act-iStyler"
-                            />
-                            <input
-                              id="returnUrl"
-                              name="returnUrl"
-                              type="hidden"
-                              value="/tr/Widget/Get/LoginRaw"
-                              class="ems-styler-activeted act-iStyler"
-                            />
-                          </div>
-                        </form>
-
-                      </div>
-                    </div>
-                  </div>
-
-                      <div class="ems-tab-header display-flex">
-                <div rel="tab-2" class="">
-                    <span><a href="javascript:void(0);">Yeni Üyelik</a></span>
-                  </div>
-                 </div>
-                 
-
-                  <div rel="tab-2" class="ems-signup" id="validateYeniUyelik">
                     <div class="form">
                       <div class="form-inner signup-form-container">
                         <form
@@ -143,9 +47,16 @@
                           id="signup"
                           action="/tr/CreateMember"
                           method="post"
+                          @submit.prevent="Register"
                         >
                           <div class="row g-20">
-                            <div class="ems-field label-anim">
+                            <div
+                              class="
+                                ems-field
+                                label-anim
+                                is-active is-completed
+                              "
+                            >
                               <label class="form-label" for="Name"
                                 >* Adınız</label
                               >
@@ -158,11 +69,18 @@
                                 id="Name"
                                 name="Name"
                                 type="text"
-                                
+                                v-model="fullname"
                               />
                               <div class="ems-field-feedback"></div>
                             </div>
-                            <div class="ems-field label-anim">
+
+                            <div
+                              class="
+                                ems-field
+                                label-anim
+                                is-active is-completed
+                              "
+                            >
                               <label class="form-label" for="Surname"
                                 >* Soyadınız</label
                               >
@@ -175,32 +93,46 @@
                                 id="Surname"
                                 type="text"
                                 name="Surname"
-                                value=""
+                                v-model="twoname"
                               />
                               <div class="ems-field-feedback"></div>
                             </div>
-                            <div class="ems-field label-anim">
+                            <div
+                              class="
+                                ems-field
+                                label-anim
+                                is-completed is-active is-completed
+                              "
+                            >
                               <label class="form-label" for="Email"
                                 >E-Mail</label
                               >
                               <input
+                                v-model="email"
                                 class="
                                   form-control
+                                  to-lower-case
                                   ems-styler-activeted
                                   act-iStyler
                                 "
                                 id="Email"
                                 name="Email"
                                 type="text"
-                                value=""
                               />
                               <div class="ems-field-feedback"></div>
                             </div>
-                            <div class="ems-field label-anim">
+                            <div
+                              class="
+                                ems-field
+                                label-anim
+                                is-completed is-active is-completed
+                              "
+                            >
                               <label class="form-label" for="Password"
                                 >Şifre</label
                               >
                               <input
+                                v-model="password"
                                 class="
                                   form-control
                                   ems-styler-activeted
@@ -212,23 +144,14 @@
                               />
                               <div class="ems-field-feedback"></div>
                             </div>
-                            <div class="ems-field label-anim">
-                              <label class="form-label" for="PasswordCheck"
-                                >Şifre Tekrar</label
-                              >
-                              <input
-                                class="
-                                  form-control
-                                  ems-styler-activeted
-                                  act-iStyler
-                                "
-                                id="PasswordCheck"
-                                name="PasswordCheck"
-                                type="password"
-                              />
-                              <div class="ems-field-feedback"></div>
-                            </div>
-                            <div class="ems-field label-anim">
+
+                            <div
+                              class="
+                                ems-field
+                                label-anim
+                                is-active is-completed
+                              "
+                            >
                               <label class="form-label" for="MobilePhone"
                                 >Telefon Numarası</label
                               >
@@ -241,61 +164,11 @@
                                 id="MobilePhone"
                                 name="MobilePhone"
                                 type="text"
-                                value=""
+                                v-model="telno"
                               />
                               <div class="ems-field-feedback"></div>
                             </div>
-                            <div class="ems-field is-active is-completed">
-                              <label class="form-label" for="Gender"
-                                >Cinsiyet</label
-                              >
-                              <span class="sStylerMainWrp sStylerWrp_select"
-                                ><div class="sStylerWrp">
-                                  <span class="sStyleHolder"
-                                    ><span class="sStyler">Seçiniz</span
-                                    ><img
-                                      class="icon-select"
-                                      src="https://img2-twist.mncdn.com/Twist/frontend/icons/select.svg" /><img
-                                      class="icon-select-active"
-                                      src="https://img2-twist.mncdn.com/Twist/frontend/icons/select-active.svg"
-                                  /></span>
-                                </div>
-                                <select
-                                  class="
-                                    form-select
-                                    ems-styler-activeted
-                                    act-iStyler
-                                    sSelect
-                                  "
-                                  id="Gender"
-                                  name="Gender"
-                                >
-                                  <option value="">Seçiniz</option>
-                                  <option value="1">Erkek</option>
-                                  <option value="2">Kadın</option>
-                                </select></span
-                              >
-                              <div class="ems-field-feedback"></div>
-                            </div>
-                            <div class="ems-field">
-                              <label class="form-label" for="BirthDate"
-                                >Doğum Tarihi</label
-                              >
-                              <input
-                                class="
-                                  form-control
-                                  ems-styler-activeted
-                                  act-iStyler
-                                "
-                                id="BirthDate"
-                                placeholder="gg.aa.yyyy"
-                                name="BirthDate"
-                                type="date"
-                                min="1931-11-21"
-                                max="2006-11-02"
-                              />
-                              <div class="ems-field-feedback"></div>
-                            </div>
+
                             <div class="ems-field is-active is-completed">
                               <div class="form-check">
                                 <span class="sStylerMainWrp sStylerWrp_checkbox"
@@ -417,13 +290,12 @@
                                 </label>
                               </div>
                             </div>
-
                             <div class="ems-field">
                               <button
                                 type="submit"
                                 class="btn btn-clr1 btnDefault"
                               >
-                                <span>Bilgilerimi Kaydet</span>
+                                <span>ÜYE OL</span>
                               </button>
                             </div>
                             <input
@@ -456,7 +328,6 @@
                             />
                           </div>
                         </form>
-                      
                       </div>
                     </div>
                   </div>
@@ -480,20 +351,20 @@
           >
             <div class="ems-none">
               <div
-                class="swiper-button-next"
+                class="swiper-button-next swiper-button-disabled"
                 tabindex="0"
                 role="button"
                 aria-label="Next slide"
-                aria-disabled="false"
+                aria-disabled="true"
               >
                 <span>İLERİ</span>
               </div>
               <div
-                class="swiper-button-prev swiper-button-disabled"
+                class="swiper-button-prev"
                 tabindex="0"
                 role="button"
                 aria-label="Previous slide"
-                aria-disabled="true"
+                aria-disabled="false"
               >
                 <span>GERİ</span>
               </div>
@@ -505,15 +376,15 @@
                 "
               >
                 <span
-                  class="
-                    swiper-pagination-bullet swiper-pagination-bullet-active
-                  "
+                  class="swiper-pagination-bullet"
                   tabindex="0"
                   role="button"
                   aria-label="Go to slide 1"
                 ></span
                 ><span
-                  class="swiper-pagination-bullet"
+                  class="
+                    swiper-pagination-bullet swiper-pagination-bullet-active
+                  "
                   tabindex="0"
                   role="button"
                   aria-label="Go to slide 2"
@@ -526,7 +397,7 @@
                 class="swiper-wrapper"
                 style="
                   transition-duration: 0ms;
-                  transform: translate3d(0px, 0px, 0px);
+                  transform: translate3d(-950px, 0px, 0px);
                 "
               >
                 <li
@@ -540,8 +411,7 @@
                     sticky
                     promo-not-trigger
                     activeted
-                    swiper-slide-active
-                    slide-active
+                    swiper-slide-prev
                   "
                   data-order="0"
                 >
@@ -588,13 +458,14 @@
                   data-promo-name=""
                   data-promo-id=""
                   data-promo-position="2"
-                  data-promo-creative="https://img2-twist.mncdn.com/Twist/uploads/banner/login/twist_üye_d_2410.jpg"
+                  data-promo-creative="https://img2-twist.mncdn.com/Twist/uploads/banner/login/signup_2109.jpg"
                   class="
                     swiper-slide
                     sticky
                     promo-not-trigger
                     activeted
-                    swiper-slide-next
+                    swiper-slide-active
+                    slide-active
                   "
                   data-order="1"
                 >
@@ -616,21 +487,21 @@
                       <source
                         media="(max-width: 1024px)"
                         srcset="
-                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/twist_üye_m_2410.jpg 1x,
-                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/twist_üye_m_2410.jpg 2x
+                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/signup_m_2109.jpg 1x,
+                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/signup_m_2109.jpg 2x
                         "
                       />
 
                       <source
                         media="(min-width: 1025px)"
                         srcset="
-                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/twist_üye_d_2410.jpg
+                          https://img2-twist.mncdn.com/Twist/uploads/banner/login/signup_2109.jpg
                         "
                       />
 
                       <img
                         class="ratio-item"
-                        src="https://img2-twist.mncdn.com/Twist/uploads/banner/login/twist_üye_m_2410.jpg"
+                        src="https://img2-twist.mncdn.com/Twist/uploads/banner/login/signup_m_2109.jpg"
                         alt=""
                       />
                     </picture>
@@ -647,7 +518,7 @@
         </div>
       </div>
     </div>
-  </main>
+</main>
 </body>
 </client-only>
 </template>
