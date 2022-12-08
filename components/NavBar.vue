@@ -12,7 +12,7 @@
       <SearchButton />
       <div id="header-container" class="container navbar-container">
         <div class="navbar-header" id="Nb1">
-          <a href="home"
+          <a href="/"
             ><img
               alt="Twist"
               title="Twist"

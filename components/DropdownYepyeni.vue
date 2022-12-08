@@ -17,7 +17,7 @@
       <li style="float: left">
         <ul style="width: 380px !important">
           <li>
-            <a href=""><span class="icon">– </span> YEPYENİ</a>
+            <a href="/Urunler"><span class="icon">– </span> YEPYENİ</a>
           </li>
           <li>
             <a href=""><span class="icon">– </span> DIŞ GİYİM</a>
