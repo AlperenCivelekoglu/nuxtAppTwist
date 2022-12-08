@@ -1188,7 +1188,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/bej-ekose-desen-puskul-seritli-ceket"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12017</div>
@@ -1273,7 +1273,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/siyah-deri-gorunumlu-kusakli-pantolon"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12087</div>
@@ -1358,7 +1358,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/ekru-desenli-oversize-kazak"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12343</div>
@@ -1431,7 +1431,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/haki-basic-kazak"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12002</div>
@@ -1504,7 +1504,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/karamel-dolgulu-yelek"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12063</div>
@@ -1577,7 +1577,7 @@
                     <div class="prd-inner">
                       <a
                         class="prd-lnk"
-                        href="/urun/gri-dolgulu-yelek"
+                        href="/urun"
                         rel=""
                       ></a>
                       <div class="prd-code none" id="plhUrun_UrnKod">12064</div>
