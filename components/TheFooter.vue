@@ -184,16 +184,6 @@
         </div>
       </div>
     </div>
-    <div class="site-footer-logo">
-      <span
-        ><img
-          src="https://img2-twist.mncdn.com/Twist/frontend/images/footer-logo.png"
-          height="100%"
-          width="100%"
-          alt="Twist"
-          title="Twist"
-      /></span>
-    </div>
   </footer>
 </template>
 

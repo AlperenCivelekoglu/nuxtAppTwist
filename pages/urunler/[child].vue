@@ -2,7 +2,7 @@
   <client-only placeholder="loading...">
     <TheHeader />
     <TheUrunler />
-    <TheFooter />
+   <TheFooter />
   </client-only>
 </template>
 

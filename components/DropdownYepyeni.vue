@@ -17,36 +17,36 @@
       <li style="float: left">
         <ul style="width: 380px !important">
           <li>
-            <a href="/Urunler"><span class="icon">– </span> YEPYENİ</a>
+            <a href="/urunler/Yepyeni"><span class="icon">– </span> YEPYENİ</a>
           </li>
           <li>
-            <a href=""><span class="icon">– </span> DIŞ GİYİM</a>
+            <a href="/urunler/DisGiyim"><span class="icon">– </span> DIŞ GİYİM</a>
           </li>
           <li>
-            <a href=""><span class="icon">– </span> KAZAK</a>
-          </li>
-        </ul>
-      </li>
-      <li style="float: left">
-        <ul style="width: 380px !important">
-          <li>
-            <a href=""><span class="icon">– </span> ELBİSE</a>
-          </li>
-          <li>
-            <a href=""><span class="icon">– </span> BLUZ</a>
-          </li>
-          <li>
-            <a href=""><span class="icon">– </span> PANTOLON</a>
+            <a href="/urunler/Kazak"><span class="icon">– </span> KAZAK</a>
           </li>
         </ul>
       </li>
       <li style="float: left">
         <ul style="width: 380px !important">
           <li>
-            <a href=""><span class="icon">– </span> AYAKKABI</a>
+            <a href="/urunler/Elbise"><span class="icon">– </span> ELBİSE</a>
           </li>
           <li>
-            <a href=""><span class="icon">– </span> AKSESUAR</a>
+            <a href="/urunler/Bluz"><span class="icon">– </span> BLUZ</a>
+          </li>
+          <li>
+            <a href="/urunler/Pantolon"><span class="icon">– </span> PANTOLON</a>
+          </li>
+        </ul>
+      </li>
+      <li style="float: left">
+        <ul style="width: 380px !important">
+          <li>
+            <a href="/urunler/Ayakkabi"><span class="icon">– </span> AYAKKABI</a>
+          </li>
+          <li>
+            <a href="/urunler/Aksesuar"><span class="icon">– </span> AKSESUAR</a>
           </li>
         </ul>
       </li>

@@ -9,5 +9,6 @@ export default defineNuxtConfig({
         '@/assets/segmentify.css',
         '@/assets/aa0f4a923f7afd330b6fc77e40d886.css',
         // SCSS file in the project
-      ]   
+      ],
+      telemetry: false
 })

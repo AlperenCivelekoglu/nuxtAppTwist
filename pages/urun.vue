@@ -1,5 +1,5 @@
 <template>
-    
+
   <client-only placeholder="loading...">
     <head>
     <title>Twist | Stil Giyim, Ayakkabı ve Aksesuar Markası</title>
@@ -10,19 +10,18 @@
     </head>
     <body>
         <TheHeader />
-        <UrunKarti /> 
-        <TheFooter />           
-        
+        <UrunKarti />
+        <TheFooter />
+
     </body>
   </client-only>
-  
-    
+
 </template>
-  
+
 <script setup lang="ts">
-  
+
 </script>
 
 <style scoped>
-  
+
 </style>
