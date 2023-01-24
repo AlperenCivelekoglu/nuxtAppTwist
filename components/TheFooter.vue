@@ -7,43 +7,43 @@
         <div data-banner="Footer Menu" class="footer-menu display-flex">
           <ul class="">
             <li class="">
-              <a target="_self" href="/ErrorPage" rel=" ">ONLINE YARDIM </a>
+              <a target="_self" href="" rel=" ">ONLINE YARDIM </a>
             </li>
             <li class="">
-              <a target="_self" href="/uyelik" rel=" "
+              <a target="_self" href="" rel=" "
                 >SIKÇA SORULAN SORULAR
               </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/musteri-hizmetleri" rel=" "
+              <a target="_self" href="" rel=" "
                 >MÜŞTERİ İLİŞKİLERİ
               </a>
             </li>
             <li class="">
-              <a target="_self" href="/uyelik" rel=" ">ÜYELİK </a>
+              <a target="_self" href="" rel=" ">ÜYELİK </a>
             </li>
             <li class="">
-              <a target="_self" href="/uzaktan-satis" rel=" "
+              <a target="_self" href="" rel=" "
                 >SATIŞ SERVİSLERİMİZ
               </a>
             </li>
           </ul>
           <ul class="m-bttm-30">
             <li class="">
-              <a target="_self" href="/twist-hakkinda" rel=" "
+              <a target="_self" href="" rel=" "
                 >TWIST KURUMSAL
               </a>
             </li>
             <li class="">
-              <a target="_self" href="/magazalarimiz" rel=" ">MAĞAZALARIMIZ </a>
+              <a target="_self" href="" rel=" ">MAĞAZALARIMIZ </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/gizlilik-bildirgesi" rel=" "
+              <a target="_self" href="" rel=" "
                 >VERİLERİN KORUNMASI
               </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/bddk-bilgi-icerigi" rel=" "
+              <a target="_self" href="" rel=" "
                 >BDDK ONAYI
               </a>
             </li>
@@ -158,17 +158,17 @@
               </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/gizlilik-bildirgesi" rel="noreferrer "
+              <a target="_self" href="" rel="noreferrer "
                 >KVKK AYDINLATMA METNİ
               </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/dogum-gunu-ozel" rel="noreferrer "
+              <a target="_self" href="" rel="noreferrer "
                 >KAMPANYA KOŞULLARI
               </a>
             </li>
             <li class="obj-desktop">
-              <a target="_self" href="/kullanim-kosullari" rel="noreferrer "
+              <a target="_self" href="" rel="noreferrer "
                 >KULLANIM SÖZLEŞMESİ
               </a>
             </li>

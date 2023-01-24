@@ -48,7 +48,7 @@
             <div class="prm-title">SHOP BY LOOK</div>
           </div>
 
-          <a class="btn-full" href="/fall-winter-2022-2023"></a>
+          <a class="btn-full" href="Urunler/Yepyeni"></a>
         </div>
       </li>
       <li
@@ -108,7 +108,7 @@
                 <form
                   id="bulletin"
                   class="ems-form response-form-inline"
-                  action="/tr/NewsletterSubscription"
+                  action=""
                   method="post"
                 >
                   <div class="ems-field ems-field-both field field-single">
@@ -165,7 +165,7 @@
                           ürün ve yeniliklerden haberdar edilebilmeniz için
                           alınmaktadır. Kişisel verilerin işlenmesi ile ilgili
                           detaylı bilgiye
-                          <a href="/gizlilik-bildirgesi" target="_blank"
+                          <a href="" target="_blank"
                             >buradan</a
                           >
                           ulaşabilirsiniz.

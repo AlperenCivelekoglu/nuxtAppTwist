@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+mode: 'universal'
+
 export default defineNuxtConfig({
     css: [
         // Load a Node.js module directly (here it's a Sass file)
@@ -12,3 +14,8 @@ export default defineNuxtConfig({
       ],
       telemetry: false
 })
+
+modules: ['@nuxtjs/pwa']
+
+
+

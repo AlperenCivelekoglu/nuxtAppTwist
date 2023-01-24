@@ -67,7 +67,7 @@
                     alt=""
                   />
                 </picture>
-                <a class="btn-full" href="/yilbasi-ozel"></a>
+                <a class="btn-full" href="Urunler/Yepyeni"></a>
               </div>
             </li>
           </ul>

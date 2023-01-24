@@ -29,7 +29,7 @@
                 src="https://img2-twist.mncdn.com/Twist/uploads/banner/popsicle/1_pantolon_m_1811.jpg"
               />
             </picture>
-            <a href="/kadin-pantolon-modelleri"><span>PANTOLON</span></a>
+            <a href="/urunler/Pantolon"><span>PANTOLON</span></a>
           </li>
           <li class="selected animate">
             <picture class="prm-media lazy activeted">
@@ -57,7 +57,7 @@
                 src="https://img2-twist.mncdn.com/Twist/uploads/banner/popsicle/2_etek_m_1811.jpg"
               />
             </picture>
-            <a href="/etek-modelleri"><span>ETEK</span></a>
+            <a href="/urunler/Elbise"><span>ELBİSE</span></a>
           </li>
           <li class="">
             <picture class="prm-media lazy activeted">
@@ -88,7 +88,7 @@
                 src="https://img2-twist.mncdn.com/Twist/uploads/banner/popsicle/3_bluz_m_1811.jpg"
               />
             </picture>
-            <a href="/bluz-modelleri"><span>BLUZ</span></a>
+            <a href="/urunler/Bluz"><span>BLUZ</span></a>
           </li>
           <li class="">
             <picture class="prm-media lazy activeted">
@@ -119,23 +119,23 @@
                 src="https://img2-twist.mncdn.com/Twist/uploads/banner/popsicle/4_triko_m_1811.jpg"
               />
             </picture>
-            <a href="/kadin-triko-kazak"><span>TRİKO</span></a>
+            <a href="/urunler/bluz"><span>BLUZ</span></a>
           </li>
         </ul>
       </div>
       <div class="grid-slider-list">
         <ul>
           <li class="animate">
-            <a href="/kadin-pantolon-modelleri"><span>PANTOLON</span></a>
+            <a href="/urunler/Pantolon"><span>PANTOLON</span></a>
           </li>
           <li class="selected">
-            <a href="/etek-modelleri"><span>ETEK</span></a>
+            <a href="/urunler/Elbise"><span>ELBİSE</span></a>
           </li>
           <li class="">
-            <a href="/bluz-modelleri"><span>BLUZ</span></a>
+            <a href="/urunler/Bluz"><span>BLUZ</span></a>
           </li>
           <li class="">
-            <a href="/kadin-triko-kazak"><span>TRİKO</span></a>
+            <a href="/urunler/DisGiyim"><span>DIŞ GİYİM</span></a>
           </li>
         </ul>
       </div>
@@ -194,7 +194,7 @@
               <div class="banner-body colorWhite">
                 <div class="prm-title">DIŞ GİYİM</div>
               </div>
-              <a class="btn-full" href="/dis-giyim"></a>
+              <a class="btn-full" href="/urunler/DisGiyim"></a>
             </div>
           </li>
         </ul>

@@ -10,8 +10,8 @@
       </div>
     </div>
     <div v-for="product in products" style="display: inline-block; margin-left: 1.3%;">
-      <a class="product" href="/urun" :id=product.id >
-        <img :src="product.img"  data-image-src="product.img" alt="product.name" class="activeted" style="width: 645px; height: 774px;">
+      <a class="product" :id=product.id :href="`../urun/${product.id}`" >
+        <img :src="product.img"  :data-image-src="product.img" :alt="product.name" class="activeted" style="width: 645px; height: 774px;">
         <div class="prd-body">
           <div class="prd-name text-uppercase">{{ product.name }}
             <div class="prd-badge">

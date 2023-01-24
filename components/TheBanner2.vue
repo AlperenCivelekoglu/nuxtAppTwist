@@ -71,7 +71,7 @@
                 </div>
               </div>
 
-              <a class="btn-full" href="/en-yeniler"></a>
+              <a class="btn-full" href="Urunler/Yepyeni"></a>
             </div>
           </li>
           <li
@@ -118,7 +118,7 @@
               <div class="banner-body colorWhite">
                 <div class="prm-title">ELBİSE</div>
               </div>
-              <a class="btn-full" href="/elbise-modelleri"></a>
+              <a class="btn-full" href="/urunler/Elbise"></a>
             </div>
           </li>
           <li
@@ -164,9 +164,9 @@
                 />
               </picture>
               <div class="banner-body colorWhite">
-                <div class="prm-title">CEKET</div>
+                <div class="prm-title">AYAKKABI</div>
               </div>
-              <a class="btn-full" href="/kadin-ceket-modelleri"></a>
+              <a class="btn-full" href="/urunler/Ayakkabi"></a>
             </div>
           </li>
         </ul>

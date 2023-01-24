@@ -12,7 +12,6 @@
         <TheHeader />
         <UrunKarti />
         <TheFooter />
-
     </body>
   </client-only>
 
