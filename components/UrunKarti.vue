@@ -365,7 +365,6 @@
   
 <script>
 import { ref,computed, onMounted } from "@vue/composition-api";
-import axios from "axios";
 export default {
   name: "UrunKarti",
   setup() {
@@ -380,27 +379,29 @@ export default {
     const products= ref([]);
 
     onMounted(async () => {
-      const { data } = await axios.get("http://localhost:3050/products");
-      yepyeniYepyeni.value = data.yepyeniYepyeni;
-      yepyeniDisgiyim.value = data.yepyeniDisgiyim;
-      yepyeniKazak.value = data.yepyeniKazak;
-      yepyeniElbise.value = data.yepyeniElbise;
-      yepyeniBluz.value = data.yepyeniBluz;
-      yepyeniAksesuar.value = data.yepyeniAksesuar;
-      yepyeniAyakkabi.value = data.yepyeniAyakkabi;
-      yepyeniPantolon.value = data.yepyeniPantolon;
 
-      products.value = [
-        ...data.yepyeniYepyeni,
-        ...data.yepyeniDisgiyim,
-        ...data.yepyeniKazak,
-        ...data.yepyeniElbise,
-        ...data.yepyeniBluz,
-        ...data.yepyeniAksesuar,
-        ...data.yepyeniAyakkabi,
-        ...data.yepyeniPantolon,
-      ]
-    });
+      await fetch("http://localhost:3050/products").then((res) => res.json()).then((data) => {
+        yepyeniYepyeni.value = data.yepyeniYepyeni;
+        yepyeniDisgiyim.value = data.yepyeniDisgiyim;
+        yepyeniKazak.value = data.yepyeniKazak;
+        yepyeniElbise.value = data.yepyeniElbise;
+        yepyeniBluz.value = data.yepyeniBluz;
+        yepyeniAksesuar.value = data.yepyeniAksesuar;
+        yepyeniAyakkabi.value = data.yepyeniAyakkabi;
+        yepyeniPantolon.value = data.yepyeniPantolon;
+
+        products.value = [
+          ...data.yepyeniYepyeni,
+          ...data.yepyeniDisgiyim,
+          ...data.yepyeniKazak,
+          ...data.yepyeniElbise,
+          ...data.yepyeniBluz,
+          ...data.yepyeniAksesuar,
+          ...data.yepyeniAyakkabi,
+          ...data.yepyeniPantolon,
+        ]
+      });
+  });
     const route = useRoute();
 
     const product = computed( ()=>{

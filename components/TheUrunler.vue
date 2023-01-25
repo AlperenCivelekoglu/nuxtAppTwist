@@ -37,7 +37,6 @@
 
 <script>
 import { ref,computed, onMounted } from "@vue/composition-api";
-import axios from "axios";
 export default {
   name: "TheUrunler",
   setup() {
@@ -51,7 +50,8 @@ export default {
     const yepyeniPantolon= ref([]);
 
     onMounted(async () => {
-      const { data } = await axios.get("http://localhost:3050/products");
+      await fetch("http://localhost:3050/products").then((res) => res.json()).then((data) => {
+
       yepyeniYepyeni.value = data.yepyeniYepyeni;
       yepyeniDisgiyim.value = data.yepyeniDisgiyim;
       yepyeniKazak.value = data.yepyeniKazak;
@@ -60,6 +60,7 @@ export default {
       yepyeniAksesuar.value = data.yepyeniAksesuar;
       yepyeniAyakkabi.value = data.yepyeniAyakkabi;
       yepyeniPantolon.value = data.yepyeniPantolon;
+    });
     });
 const route = useRoute();
     const products = computed(()=>{
