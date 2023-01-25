@@ -24,7 +24,23 @@
 </template>
 
 <script setup lang="ts">
+if (process.client) {
+  window.addEventListener('load', () => {
+    if (!('serviceWorker' in navigator)) {
+      throw new Error('serviceWorker is not supported in current browser!')
+    }
+
+    navigator.serviceWorker.register('/sw.js')
+  })
+}
 </script>
 
 <style scoped>
+.center {
+  text-align: center;
+}
+img {
+  width: 100%;
+  max-width: 760px;
+}
 </style>
