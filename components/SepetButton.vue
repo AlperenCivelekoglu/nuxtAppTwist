@@ -55,6 +55,7 @@
 </template>
 
 <script lang="ts">
+/*
 export default {
   setup() {
     var script = document.createElement("script");
@@ -73,4 +74,5 @@ export default {
     // a computed getter
   },
 };
+*/
 </script>>
