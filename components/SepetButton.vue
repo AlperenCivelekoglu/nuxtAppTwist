@@ -55,24 +55,5 @@
 </template>
 
 <script lang="ts">
-/*
-export default {
-  setup() {
-    var script = document.createElement("script");
-    script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-    let count = 0;
-    var isSepetVisible = false;
-    return {
-      count,
-      isSepetVisible,
-    };
-  },
-  mounted() {},
-  methods: {},
-  computed: {
-    // a computed getter
-  },
-};
-*/
+
 </script>>

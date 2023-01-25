@@ -11,14 +11,14 @@
       />
     </head>
     <body>
-      <the-header />
+
       <div class="ga3">
         <the-banner-1 />
         <the-banner-2 />
       </div>
       <the-banner-3 />
       <the-banner-4 />
-      <TheFooter />
+
     </body>
   </client-only>
 </template>
